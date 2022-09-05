@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Demo</title>
+    <style>
+        .block {
+            width: 500px;
+            border: 2px solid red;
+            height: 200px;
+            background-color: yellow;
+            /*numeric properties : A, Non-numeric : NA*/
+            transition-duration: 5s;
+            transition-property: all;
+            /*all: default, define properties with comma*/
+            /*             transition-delay: 3s; */
+            transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22)
+                /*ease:default, ease-in, ease-out, linear, ease-in-out, cubic beizer*/
+        }
+
+        /*ease: slowly both at the beginning and end, and speeds up only in the middle somewhere.
+        ease-in-out: slowly both at the beginning and end, constant in middle*/
+
+        #block1:hover {
+            background-color: green;
+            height: 500px;
+            border: 10px dashed pink;
+            /*style will change immediately*/
+        }
+
+        #block2:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="block" id="block1">
+
+    </div>
+    <div class="block" id="block2">
+
+    </div>
+</body>
+
+</html>

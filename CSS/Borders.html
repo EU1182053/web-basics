@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Demo</title>
+    <style>
+        .block {
+            height: 100px;
+        }
+
+        #block1 {
+            border-left-style: solid;
+            /*double, dashed, dotted, groove*/
+            border-left-width: 4px;
+            /*1 to ... px*/
+            border-left-color: green;
+            /*color name,color code, rgba*/
+            /*top, right, bottom*/
+            border: aquamarine 10px double;
+        }
+
+        #block2 {
+            border-style: double; /*all sides*/
+            border-style: double solid; /*top right (opposite side same border)*/
+            border-style: double solid dotted dashed;
+            border-width: 6px 4px 2px 8px;
+            border-color: red green blue yellow;
+            border-top-left-radius: 50px;
+            /*padding : spacing inside selected element*/
+            padding-left: 30px;
+              /*margin : spacing outside selected element*/
+            margin-left: 30px;
+            margin-top: 20px;
+        }
+
+        #block3 {
+            border-style: solid;
+            border-color: green;
+            border-width: 5px;
+            border: 5px green solid; /*any sequence*/
+            border-radius: 40px;
+            border-radius: 40px 10px 50px 0px;
+            margin: 10px;
+            padding: 20px;
+            padding: 20px 50px; /* t r b l, b=t, l=r*/
+            padding : 20px 50px 20px 0px
+        }
+        #block4{
+            padding-left: 30px;
+            margin-left: 40px;
+            background: linear-gradient(blue,yellow);
+        }
+        #block5{
+            border: 5px green solid;
+            height: 500px;
+            background: rgba(0, 255,0, 0.3);
+        }
+        
+      
+
+        #block6{
+            width: 700px;
+            height: 200px;
+            /* border: 1px red solid; */
+            margin: 30px;
+            /*right width, bottom width, spread value*/
+            box-shadow: 10px 0px ;
+            box-shadow: 10px 15px ;
+            box-shadow: 10px 15px 50px; 
+            box-shadow: 10px 15px 30px red;
+            box-shadow: -10px -15px 4px red;  /* ++ rb, +- rt, -+ lb, -- lt*/
+           /*1st 2 values are compulsary, sequence matters*/
+        }
+        h3{
+            text-shadow: 10px 10px 4px red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="block" id="block1">
+        India is my country
+    </div>
+    <div class="block" id="block2">
+        India is my country2
+    </div>
+    <div class="block" id="block3">
+        India is my country3
+    </div>
+    <div class="block" id="block4"> 
+        India is my country
+    </div>
+    <div class="block" id="block5"> 
+        India is my country
+    </div>
+   <div class="block" id="block6">
+        india 
+     <h3>This is example of text shadow and box shadow</h3>
+   </div>
+    
+</body>
+
+</html>

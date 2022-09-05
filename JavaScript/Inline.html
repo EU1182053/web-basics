@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline Javascript</title>
+    
+</head>
+<body>
+    <form onsubmit="event.preventDefault(); uppResult.value=(myName.value).toUpperCase();">
+        <label>Enter Name:</label>
+        <input type="text" id="myName" name="mymyName">
+        <input type="submit">
+    </form>
+    <p>
+        <b>Name is UpperCase : <output id="uppResult"></output></b>
+    </p>
+
+    <div>
+        <label>Enter Name:</label>
+        <input type="text" id="myName1" name="mymyName">
+        <button onclick="uppResult1.value=(myName1.value).toUpperCase();">CLICK</button>
+    </div>
+    <p>
+        <b>Name is UpperCase : <output id="uppResult1"></output></b>
+    </p>
+</body>
+</html>

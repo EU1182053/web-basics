@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformation Demo</title>
+    <style>
+        .block {
+            height: 50px;
+            width: 80px;
+            border: 4px solid red;
+            text-shadow: 10px 10px 2px;
+            transition-duration: 3s;
+            margin: 30px;
+        }
+
+        /*translateX, translateY, translate*/
+        #block1:hover {
+            transform: translate(300px);
+            /*translateX(500px), translateY(300px),translate(300px,200px)*/
+            /*Note: translate behaves like translateX if we provide single value*/
+        }
+
+        #block2:hover {
+            transform: rotateY(-88deg);
+            /*rotate(180deg), rotateY(-88deg), rotateX(88deg)*/
+        }
+
+        .ss {
+            margin: auto;
+        }
+
+        #block3:hover {
+            transform: scale(2);
+            /*scaleX(2),scaleX(0.5),scaleX(-2), scaleY(4), scale(2,4),scale(2)  */
+            /*note: scale with single value applicable for both width and height*/
+        }
+
+        #block4:hover {
+            transform: skew(45deg);
+            /*skewX(50deg), skewY(45deg), skew(45deg,56deg)*/
+            /*Note: skew with single value behaves like skewX, -ve angles allowed*/
+        }
+
+        #block5:hover {
+
+            /*matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY())*/
+            transform: matrix(1, 2, -1, 1, 80, 80);
+        }
+    </style>
+</head>
+
+<body>
+    <section class="block" id="block1">
+        India is my country1
+    </section>
+    <section class="block" id="block2">
+        India is my country2
+    </section>
+    <section class="block ss" id="block3">
+        India is my country3
+    </section>
+    <section class="block ss" id="block4">
+        India is my country4
+    </section>
+    <section class="block ss" id="block5">
+        India is my country5
+    </section>
+</body>
+
+</html>

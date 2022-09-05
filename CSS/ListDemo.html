@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Demo</title>
+    <link rel="stylesheet" href="Styles/MyCSS.css">
+    <style>
+        /*element selector*/
+        h2,
+        li {
+            border: 2px solid yellow;
+        }
+    </style>
+    <!--  modularity, reuse
+    can not reuse accross the web pages-->
+</head>
+
+<body>
+    <section>
+        <h1>Ice Scream Flavours</h1>
+        <h2 style="background-color: #9d0fbd; color: yellow;">Icecream Flavours</h2>
+        <!--1. readability gets reduced
+    2. HTML+CSS
+    3. Can not reuse the properties-->
+        <!-- default type : "1"-->
+        <ol>
+            <li style="background-color: #9d0fbd; color: yellow;">Vanilla</li>
+            <li>mango</li>
+            <li>vanilla</li>
+            <li>butterscotch</li>
+            <li>blackcurrent</li>
+            <li>strawberry</li>
+        </ol>
+        <ol type="A">
+            <li>mango</li>
+            <li>vanilla</li>
+            <li>butterscotch</li>
+            <li>blackcurrent</li>
+            <li>strawberry</li>
+        </ol>
+    </section>
+    <section>
+        <h1>Unordered List</h1>
+        <ul>
+            <li>mango</li>
+            <li>vanilla</li>
+            <li>butterscotch</li>
+            <li>blackcurrent</li>
+            <li>strawberry</li>
+        </ul>
+    </section>
+    <section>
+        <h1>Nested List</h1>
+        <ol>
+            <li>Web Basics</li>
+            <ol>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+                <ul>
+                    <li>Core JS</li>
+                    <li>Advanced JS</li>
+                </ul>
+                <li>JQuery</li>
+            </ol>
+        </ol>
+    </section>
+</body>
+
+</html>

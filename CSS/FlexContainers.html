@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flexbox{
+            border: 3px double crimson;
+            background: yellowgreen;
+            height: 300px;    /*default: childs gets stretched align-items: stretch*/
+            display: flex;   /*flex-direction : row default*/  
+        }
+        .flexbox>div{
+            border: 3px double darkgoldenrod;
+            background: crimson;        
+        }
+        #flex1{         
+            flex-direction : row; /*row, column, row-reverse, column-reverse*/
+            align-items: baseline; /*v align stretch, center,flex-start, flex-end*/
+            justify-content: space-around;/* h align center,flex-start/start, flex-end/end*/
+        }    
+        #flex1>div:nth-child(6){
+            align-self: stretch;  /*for child*/
+        }
+        #flex1>div:first-child{
+            height: 100px;
+            line-height: 100px;
+        }
+        #flex2{
+            width: 400px;
+           flex-wrap: wrap; 
+            justify-content: center;
+            /*when in flex container we have muliple lines of childs then for vertical alignment
+            1. align-items, 2. align-content*/
+            align-items: flex-start;
+            align-content: center; /*multiple lines (wrap) then this is better*/
+             flex-direction: row-reverse; 
+            flex-flow: row wrap; /*shorthand for direction and wrap*/
+        }
+        #flex3{
+            align-items: center; 
+            justify-content: space-evenly;
+            width: 800px;
+        }
+        #flex3>*{
+            flex-basis: 80px; /*use this property for child*/
+        }
+        /*default order is 0*/
+        #flex3>div:first-child{ order: 5;}
+        #flex3>div:nth-child(2){ order: 3;}
+        #flex3>div:nth-child(3){ order: 8;}
+        #flex3>div:nth-child(4){ order: 1;}
+        #flex3>div:nth-child(5){ order: 7;}
+        #flex3>div:nth-child(6){ order: 4;}
+        #flex3>div:nth-child(7){ order: 2;}
+        #flex3>div:last-child{ order: 6;}
+        /*align self, order : use this for childs*/
+    </style>
+</head>
+<body>
+    <section class="flexbox" id="flex1">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Child Item 3</div>
+        <div>Item 4</div>
+        <div>Item 5</div>
+        <div>Child Item 6</div>
+        <div>Item 7</div>
+        <div>Item 8</div>
+    </section>
+    <section class="flexbox" id="flex2">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Child Item 3</div>
+        <div>Item 4</div>
+        <div>Item 5</div>
+        <div>Child Item 6</div>
+        <div>Item 7</div>
+        <div>Item 8</div>
+        <div>Item 9</div>
+        <div>Item 10</div>
+        <div>Child Item 11</div>
+        <div>Item 12</div>
+        <div>Item 13</div>
+    </section>
+    
+    <section class="flexbox" id="flex3">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Child Item 3</div>
+        <div>Item 4</div>
+        <div>Item 5</div>
+        <div>Child Item 6</div>
+        <div>Item 7</div>
+        <div>Item 8</div>
+    </section>
+</body>
+</html>

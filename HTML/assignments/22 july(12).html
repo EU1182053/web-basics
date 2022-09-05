@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 12</title>
+</head>
+
+<body>
+    <p>Click "Remove" to remove the first item from the list:</p>
+    <button onclick="myFunction()">Remove</button>
+
+    <ul id="myList">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+
+    <h3>Slide Show for images</h3>
+    <img id="slideShow" src="../MyImages/1.jpg" width="500" height="200" name="image" />
+
+    <h3>Ordered List of checked elements.</h3>
+    <section id="sports">
+        <label>Choose your favourite sports</label><br>
+        <label><input type="checkbox" id="ch1" name="sport" value="cricket" onchange="collectSports()">:Cricket</label>
+        <label><input type="checkbox" id="ch2" name="sport" value="kabaddi" onchange="collectSports()">:Kabaddi</label>
+        <label><input type="checkbox" id="ch3" name="sport" value="football"
+                onchange="collectSports()">:Football</label>
+        <label><input type="checkbox" id="ch4" name="sport" value="basketball"
+                onchange="collectSports()">:Basketball</label>
+    </section>
+</body>
+<script>
+
+    // removeChild function
+    function myFunction() {
+        const list = document.getElementById('myList');
+        if(list.hasChildNodes()){
+        list.removeChild(list.firstElementChild)
+
+        }
+        else{
+            console.log('Empty List')
+        }
+    }
+
+    // slide show for images
+    var image = document.getElementById('slideShow');
+    var img_array = ['../MyImages/1.jpg', '../MyImages/2.jpg', '../MyImages/3.jpg']
+    var index = 0;
+
+    function slide() {
+        image.setAttribute('src', img_array[index]);
+        index += 1;
+        if (index >= img_array.length) {
+            index = 0;
+
+        }
+    }
+
+    setInterval("slide()", 2000);
+
+
+    // ordered list
+    document.getElementById('ch2').checked=true;
+    let nodeList = document.getElementsByName('sport');
+    console.log(nodeList)
+
+    function collectSports() {
+
+        // let listNode=document.getElementById("sportsList");
+        //     if(listNode!=null){
+        //         listNode.remove();  // eletoremove.remove()  DOM method  // parent.removeChild(child): child of 
+        //         // parent will be removed
+        //     }
+        let nodeArray = [];
+        nodeList.forEach((node) => {
+            if (node.checked) {
+                nodeArray.push(node.value)
+            }
+        });
+
+        console.log("nodeArray", nodeArray);
+        let olNode = document.createElement('ol');
+        olNode.setAttribute('id','sportsList');
+        olNode.style.fontSize = '20px';
+        olNode.style.fontStyle = 'italic';
+
+        // let liNode = document.createElement('li');
+        // olNode.append(liNode);
+
+        for (let sport of nodeArray) {
+            let liNode = document.createElement('li');
+            liNode.style.fontSize = '20px';
+            liNode.style.fontStyle = 'italic';
+            olNode.append(liNode);
+            liNode.textContent = sport;   
+        }
+        console.log("olNode", olNode)
+        document.getElementById("sports").append(olNode);
+    }
+</script>
+
+</html>

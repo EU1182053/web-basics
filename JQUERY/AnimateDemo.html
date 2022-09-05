@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimateDemo</title>
+</head>
+<body>
+    <form>
+        <label>First Name : </label><input type="text" id="fname" name="myname">
+        <label>Middle Name : </label><input type="text" id="fname" name="myname">
+        <label>Last Name : </label><input type="text" id="fname" name="myname">
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!--minified-->
+    <script>
+        $(document).ready(function(){
+            $('[name="myname"]').focus(function(){
+                // animate only works with numeric values, non numeric properties does not get applied
+                          // default timer: 400ms, default easing is swing
+                // $(this).animate({height:'30px', width:'150px', border:'5px solid blue', backgroundColor:'yellow'}); 
+              //  $(this).animate({height:'30px', width:'150px', border:'5px solid blue'},1200); 
+
+                $(this).animate({height:'30px', width:'150px', border:'5px solid blue'},1200, "linear");   
+
+              /*   $(this).animate({height:'30px', width:'150px', border:'5px solid blue'},1200,linear,function(){
+                    $(this).fadeTo(500,0.5);
+                });  */
+            });
+            
+        });
+    </script>
+</body>
+</html>

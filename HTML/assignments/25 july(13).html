@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HideShow</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!--minified-->
+    <script>
+        $(document).ready(function(){
+           
+            let btnNode=$('[type="button"]');
+            btnNode.click(function(){
+                if(btnNode.val()==='HIDE'){
+                        $('#hideImage').hide(1000, function(){
+                            btnNode.val('SHOW');     // btnNode.value='SHOW'
+                        });
+                }    
+                else{
+                    $('#hideImage').show(2000, function(){
+                        btnNode.val('HIDE');    
+                    });
+                }         
+            });
+
+            $("#toggle").click(function(){
+                $('#hideImage').toggle(5000);
+            });
+
+        });
+    </script>
+     <style>
+        #hideImage{
+            height: 300px;
+            width: 400px;
+        }
+   </style>
+</head>
+<body>
+    <input type="button" value="HIDE">
+    <button id="toggle">TOGGLE HIDESHOW</button>
+    <img id="hideImage" src="../MyImages/3.jpg"  >
+</body>
+</html>

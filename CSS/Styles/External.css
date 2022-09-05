@@ -1,0 +1,22 @@
+h1,h2,h3{
+    color: yellow;
+}
+#neolink{
+    background-color: crimson;
+}
+[style]{
+   color: darkorchid;
+}
+[target="_blank"]{
+    background-color: coral;
+}
+.myLink{
+    background-color: aqua;
+}
+
+a{
+    background-color: yellow;
+}
+
+/*presedence is to class selector over element selector*/
+/*in attribute selector and class selector : sequence matters*/

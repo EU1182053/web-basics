@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <form action="Success.html">
+            <label for="fname">First Name</label>
+            <input type="text" name="fname" id="fname" required pattern="[A-Za-z]*">
+            <!-- * means name can be of any length-->
+            <label for="lname">Last Name</label>
+            <input type="text" name="lname" id="lname">
+            <label for="company">Company Name:</label>
+            <input type="text" id="company" name="company" value="neosoft">
+            <label for="loc">Work Location:</label>
+            <input type="text" name="loc" id="loc" value="dadar" readonly>
+            <br>
+            <input type="number" name="age" id="age" placeholder="Enter your age" min="18" max="80">
+            <input type="email" name="email" id="email" placeholder="Enter your email">
+            <input type="password" name="pwd" id="pwd" placeholder="Password"
+                pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}">
+            <input type="password" name="cnfpwd" id="cnfpwd" placeholder="Confirm Password"
+                pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}">
+            <input type="tel" name="phone" id="phone" placeholder="Telephone No." pattern="[0-9]{10}">
+            <br>
+            <label for="bdate">Enter birth date</label>
+            <input type="datetime-local" name="bdate" id="bdate">
+
+            <label for="join">Month of Joining</label>
+            <input type="month" name="join" id="join">
+            <input type="submit" value="Register">
+            <!-- Checkbox -->
+            <section>
+                <label>Choose Interested Course:</label><br>
+                <label><input type="checkbox" id="ch1" name="course" value="java">:JAVA</label>
+                <label><input type="checkbox" id="ch2" name="course" value="web" checked required>:WEB BASICS</label>
+                <label><input type="checkbox" id="ch3" name="course" value="angular">:ANGULAR</label>
+                <label><input type="checkbox" id="ch4" name="course" value="react">:REACT</label>
+            </section>
+            <!--Radio Buttons-->
+            <section>
+                <label>Choose Gender:</label><br>
+               <label> <input type="radio" id="r1" name="gender" value="male">:MALE</label>
+               <label> <input type="radio" id="r2" name="gender" value="female">:FEMALE</label>
+            </section>
+
+            <label>Address:</label><br>
+            <textarea rows="10" cols="30"></textarea>
+
+            <!-- Dropdowns-->
+            <label>Where you want to attend the course:</label>
+            <select id="location" name="loc">
+                <option value="dadar">DADAR</option>
+                <option value="rabale">RABALE</option>
+            </select>
+
+            <!-- create button in many different ways-->
+            <input type="submit" value="REGISTER">
+            <input type="image" src="MyImages/star.jpg" height="50" width="100">
+            <input type="reset">
+            <button>SUBMIT FORM</button>
+            <input type="button" value="SUBMIT USER FORM">
+        </form>
+
+        <input type="color" id="myColor"><label>:Choose Label</label>
+    </section>
+</body>
+
+</html>

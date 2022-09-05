@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!--minified-->
+    <script>
+    $(document).ready(()=>{
+        $('.hidebutton').click(()=>{   //event function
+                $('#block1').hide(4000);  
+                $("#block2").hide(2000);
+        });                 
+    });
+   </script>
+   <style>
+        #block1,#block2{
+            height: 100px;
+            width: 200px;
+            border: 2px solid pink;
+        }
+   </style>
+</head>
+<body>
+    <button>HIDE</button>
+    <button class="hidebutton">HIDE</button>
+    <button class="hidebutton">HIDE</button>
+    <div id="block1" class="block">
+        India is my country
+    </div>
+    <div id="block2">
+       I love my India
+    </div>
+</body>
+</html>

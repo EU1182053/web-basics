@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precedence Demo</title>
+   
+    <style>
+        h1,h2{
+            color: blue;
+        }
+       #myHeading{
+        color: blue;
+       }
+    </style>
+    <link href="Styles/External.css" rel="stylesheet">
+    <!-- when same style in internal as well as external, sequence of style and link tag matters-->
+</head>
+<body>
+    <h4 style="color: bisque;" id="myHeading">Neosoft Technologies</h4>
+    <h1 style="color: red;">Neosoft Technologies</h1>
+    <h2>Neosoft Technologies</h2>
+    <h3>Neosoft Technologies</h3>
+    <a class="myLink" href="#" target="_blank" id="neolink">Welcome to Neosoft Technologies</a>
+</body>
+</html>
+<!-- note : Inline precedes every selector
+inter and external : id selector precedes every selector-->

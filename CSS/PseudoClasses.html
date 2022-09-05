@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+    <style>
+        #block1:hover{
+            background: yellow;
+        }
+        #user:focus{
+            border: 4px dashed darkblue;
+        }
+        nav{
+          background-color: black;
+          height: 50px;  
+        }
+        nav ul{
+           list-style-type: none; display: flex;
+        }
+        nav li{
+            margin: 10px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            transition-duration: 2s;
+        }
+        /*first-child, last-child, nth-child(number)*/
+        /*link : not yet visited*/
+        a:link{
+            color: yellow;
+        }
+         /*visited :  visited*/
+        a:visited{
+            color: greenyellow;
+        }
+        /*hover : user is puting mouse over a*/
+        a:hover{
+            transform: scale(2);
+        }
+        /*active: clicked link*/
+        a:active{
+            color: darkorange;
+        }
+        p::first-line{
+            color: blueviolet;
+        }
+        div::first-line{
+            background-color: yellow;
+        }
+        p::first-letter{
+            color: crimson;
+            font-weight: bold;
+            font-size: 20px;
+            text-decoration: underline;
+        }
+        h2::after{
+            content: ' user';
+        }
+        h2::before{
+            content: 'Welcome';
+        }
+        p::selection{
+            color: darkblue;
+            background-color: bisque;
+        }
+        article:first-child::first-line{
+            color: aqua;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="block" id="block1">
+        India is my country
+    </section>
+    <input type="text" id="user">
+    <nav id="topnav">
+        <ul >
+            <li><a href="https://www.iitb.ac.in/">IIT Bombay website</a></li>
+            <li><a href="https://www.eurokidsindia.com/online-nursery-school/">Kids Nursary Online Study</a></li>
+        </ul>
+    </nav>
+    <p>
+        India is my country. All indians all my brothers and sisters.<br>
+        India is my country. All indians all my brothers and sisters.
+    </p>
+    <div>
+        <h2>Hello</h2>
+        <p>
+            How r u
+        </p>
+    </div>
+
+    <section>
+        <article>
+            article 1.<br>article 1
+        </article>
+        <article>
+            article 2.<br>article 2
+        </article>
+    </section>
+    <hr>
+    <div>
+        <article>
+            article 1.<br>article 1
+        </article>
+        <article>
+            article 2.<br>article 2
+        </article>
+    </div>
+    <!-- apply color to first line of article as first child-->
+</body>
+</html>

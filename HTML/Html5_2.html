@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    meter {
+        height: 50px;
+        width: 700px;
+    }
+</style>
+
+<body>
+    <details>
+        <summary>HTML</summary>
+        <div>
+            HTML is Hypertext Markup Language
+        </div>
+        <div>
+            HTML is used to describe contents of web page. We use tags for this.
+        </div>
+    </details>
+    <p>Hello how are you</p>
+    <hr>
+    <div style="height: 200px; width: 200px; border: 2px solid blue; display: none;">
+        India is my country
+    </div>
+    <div style="height: 200px; width: 200px; border: 2px solid blue; visibility:hidden;">
+        India is my country
+    </div>
+    <div style="height: 200px; width: 200px; border: 2px solid blue;" hidden>
+        India is my country
+    </div>
+    <p>
+        after div
+    </p>
+
+    <section>
+        <form>
+            <label>Enter your name:</label>
+            <input type="text" id="myName" onkeyup="op.value=myName.value">
+        </form>
+        <p><b>Your Name is : <i><output id="op"></output></i></b></p>
+    </section>
+    <section>
+        <form>
+            <label>Enter your numbers:</label>
+            <input type="text" id="myName1" onblur="op1.value=myName1.value">
+        </form>
+        <p><b>Your answer is : <i><output id="op1"></output></i></b></p>
+
+        <!-- in form take 2 numbers as input create one output tag for result output.
+put oninput event on form, make addition of 2 numbers and save in output tag (concatination)-->
+        <h2>On input</h2>
+        <form oninput="result.value=age1.value+age2.value">
+            <input type="number" id="age1">
+            <input type="number" id="age2">
+            <output id="result"></output>
+        </form>
+
+
+        <!--actual addition of two numbers without initial value-->
+        <h2>actual addition of two numbers without initial value</h2>
+        <form oninput="result1.value=parseFloat(aged1.value)+parseFloat(aged2.value)">
+            <input type="number" id="aged1">
+            <input type="number" id="aged2">
+            <output id="result1"></output>
+        </form>
+
+        <!--actual addition of two numbers with some initial value-->
+        <h2>actual addition of two numbers with some initial value</h2>
+        <form oninput="result1.value=parseFloat(aged1.value)+parseFloat(aged2.value)">
+            <input type="number" id="aged1" value="0">
+            <input type="number" id="aged2" value="0">
+            <output id="result1"></output>
+        </form>
+
+        <!--actual addition of two numbers if one of the other value is miising-->
+        <h2>actual addition of two numbers if one of the other value is miising</h2>
+        <form oninput="if(num1.value=='')num1.value='0'; 
+         if(num2.value=='')num2.value='0'; 
+         result1.value=parseFloat(num1.value)+parseFloat(num2.value);">
+            <input type="number" id="num1" value="0">
+            <input type="number" id="num2" value="0">
+            <output id="result1"></output>
+        </form>
+    </section>
+
+    <!-- meter tag-->
+    <b>Fuel Indicator 1</b>
+    <meter min="0" value="200" max="200" id="fuelNode1"></meter> <!-- all values are safer-->
+
+    <br>
+    <b>Fuel Indicator 2</b>
+    <meter min="0" low="50" value="49" high="180" max="200" id="fuelNode2"></meter>
+
+    <br>
+    <!-- if value cross high value or if value comes below low value : then it shows warning-->
+    <b>Fuel Indicator 3</b>
+    <meter min="0" low="50" value="160" optimum="180" high="160" max="200"></meter>
+    <meter min="0" low="50" value="50" optimum="180" high="160" max="200"></meter>
+    <meter min="0" low="50" value="49" optimum="180" high="160" max="200"></meter>
+
+    <!--  when optimum 180
+     200-160 : Green, 159-50 : Orange , 49-0 : Red  -->
+    <meter min="0" low="50" value="200" optimum="180" high="160" max="200" id="meterNode"></meter>
+    <script>
+        setInterval(() => {
+            document.getElementById('meterNode').value--;
+        }, 200)
+    </script>
+</body>
+
+</html>

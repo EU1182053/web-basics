@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image</title>
+<style>
+body{
+    background-image: url('../HTML/MyImages/Rose.jpg');
+    background-repeat: no-repeat;
+    /* background-size: contain; */  /*px, % / 100% : contain, keyword*/
+    background-position: left;  /*center, left, top*/
+    background-size: contain; 
+   /*  background-attachment: fixed; */
+}
+h1{
+    opacity: 1; /*(0-1);*/
+}
+</style>
+
+</head>
+<body>
+    <h1 class="myStyle">HOW TO CREATE TABLE IN HTML</h1>
+    <table border="5" id="table1">
+        <caption>Employee Information</caption>
+        <thead id="thead1">
+            <tr><th>ID</th><th>name</th><th>DEPARTMENT</th><th>POSITION</th></tr>      
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>Kavita</td><td>IT</td><td>Manager</td></tr>
+            <tr><td>4</td><td>Rana</td><td>HR</td><td>Manager</td></tr>
+            <tr><td>8</td><td>Pravin</td><td>Marketting</td><td>Sales Rep</td></tr>
+            <tr><td>9</td><td>Sophia</td><td>Marketting</td><td>Sales Rep</td></tr>
+            <tr><td>10</td><td>Yusuf</td><td>IT</td><td>Technician</td></tr>
+        </tbody>
+        <tfoot>
+            <tr><td colspan="4"><small>Note : This contains only specific employee details</small></td></tr>
+        </tfoot>
+    </table>
+    <table border="5" style="border-collapse: collapse;">
+        <caption class="myStyle">Employee Information</caption>
+        <thead>
+            <tr><th>ID</th><th>NAME</th><th>Department</th><th>POSITION</th></tr>      
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>Kavita</td><td>IT</td><td>Manager</td></tr>
+            <tr><td>4</td><td>Rana</td><td>HR</td><td>Manager</td></tr>
+            <tr><td>8</td><td>Pravin</td><td>Marketting</td><td>Sales Rep</td></tr>
+            <tr><td>9</td><td>Sophia</td><td>Marketting</td><td>Sales Rep</td></tr>
+            <tr><td>10</td><td>Yusuf</td><td>IT</td><td>Technician</td></tr>
+        </tbody>
+        <tfoot>
+            <tr><td colspan="4">Note : This contains only specific employee details</td></tr>
+        </tfoot>
+    </table>
+    <table border="5">
+        <caption id="myCaption" class="myStyle">Employee Information</caption>
+        <thead>
+            <tr><th>ID</th><th>NAME</th><th>DEPARTMENT</th><th>POSITION</th><th colspan="2">Contact Number</th></tr>      
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>Kavita</td><td>IT</td><td rowspan="2">Manager</td><td>887878787</td><td>9898989898</td></tr>
+            <tr><td>4</td><td>Rana</td><td>HR</td><td>8687878787</td><td>9898689898</td></tr>
+            <tr><td>8</td><td>Pravin</td><td>Marketting</td><td>Sales Rep</td><td colspan="2">9787878787</td></tr>
+            <tr><td>9</td><td>Sophia</td><td>Marketting</td><td>Sales Rep</td><td>8587878787</td><td>9899989898</td></tr>
+            <tr><td>10</td><td>Yusuf</td><td>IT</td><td>Technician</td><td>8787848787</td><td>9498989898</td></tr>
+        </tbody>
+        <tfoot>
+            <tr><td colspan="6"><small>Note : This contains only specific employee details</small></td></tr>
+        </tfoot>
+    </table>
+    
+    <section>  
+        <h1>Ordered List</h1>
+        <h2 style="background-color: #9d0fbd; color: yellow;">Icecream  Flavours</h2>
+        <!--1. readability gets reduced
+        2. HTML+CSS
+        3. Can not reuse the properties-->
+        <!-- default type : "1"-->
+        <ol>
+            <li style="background-color: #9d0fbd; color: yellow;">Vanilla</li>
+            <li>Mango</li>
+            <li>Butterscotch</li>
+            <li>Coconut</li>
+        </ol>
+        <li>dhdhdhd</li>
+        <ol type="A">
+            <li>Vanilla</li>
+            <li>Mango</li>
+            <li>Butterscotch</li>
+            <li>Coconut</li>
+        </ol>
+        <ol reversed>
+            <li>Vanilla</li>
+            <li>Mango</li>
+            <li>Butterscotch</li>
+            <li>Coconut</li>
+            <li>Vanilla</li>
+            <li>Mango</li> 
+            <li>Vanilla</li>
+            <li>Mango</li>
+        </ol>
+        <ol type="a" reversed>
+            <li>Vanilla</li>
+            <li>Mango</li>
+            <li>Butterscotch</li>
+            <li>Coconut</li>
+            <li>Chocolate</li>
+            <li>Strawberry</li> 
+            <li>Black Current</li>
+            <li>Oreo</li>
+        </ol>
+        <ol type="A" start="5">
+            <li>Vanilla</li>
+            <li>Mango</li>
+            <li>Butterscotch</li>
+            <li>Coconut</li>
+            <li>Chocolate</li>
+            <li>Strawberry</li> 
+            <li>Black Current</li>
+            <li>Oreo</li>
+        </ol>
+        <ol type="A" start="-3">
+            <li>Vanilla</li>
+            <li>Mango</li>
+            <li>Butterscotch</li>
+            <li>Coconut</li>
+            <li>Chocolate</li>
+            <li>Strawberry</li> 
+            <li>Black Current</li>
+            <li>Oreo</li>
+        </ol>
+        <ol start="-3">
+            <li>Vanilla</li>
+            <li>Mango</li>
+            <li>Butterscotch</li>
+            <li>Coconut</li>
+            <li>Chocolate</li>
+            <li>Strawberry</li> 
+            <li>Black Current</li>
+            <li>Oreo</li>
+        </ol>
+        <ol start="9" type="a" reversed >
+            <li>Vanilla</li>
+            <li>Mango</li>
+            <li>Butterscotch</li>
+            <li>Coconut</li>
+            <li>Chocolate</li>
+            <li>Strawberry</li> 
+            <li>Black Current</li>
+            <li>Oreo</li>
+        </ol>
+    </section>
+    <section>
+    <h2>UnorderedList</h2>
+    <!-- default type : disc-->
+    <ul>
+        <li>Vanilla</li>
+        <li>Mango</li>
+        <li>Butterscotch</li>
+        <li>Coconut</li>
+    </ul>
+    <ul type="circle">
+        <li>Vanilla</li>
+        <li>Mango</li>
+        <li>Butterscotch</li>
+        <li>Coconut</li>
+    </ul>
+    <ul type="square">
+        <li>Vanilla</li>
+        <li>Mango</li>
+        <li>Butterscotch</li>
+        <li>Coconut</li>
+    </ul>
+    </section>
+    <section>
+        <h2>Nested List</h2>
+        <h2>Technology List</h2>
+        <ol>
+            <li>Web Basics
+                <ol>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JAVASCRIPT
+                        <ul>
+                            <li>Core JS</li>
+                            <li>Advanced JS</li>
+                        </ul>
+                    </li>
+                    <li>JQUERY</li>
+                </ol>
+            </li>
+            <li>Angular</li>
+            <li>React</li>
+        </ol>
+        <ul>
+            <li>Web Basics
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JAVASCRIPT
+                        <ul>
+                            <li>Core JS</li>
+                            <li>Advanced JS</li>
+                        </ul>
+                    </li>
+                    <li>JQUERY</li>
+                </ul>
+            </li>
+            <li>Angular</li>
+            <li>React</li>
+        </ul>
+        <ol>
+            <li>Web Basics
+                <ol>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JAVASCRIPT
+                        <ol>
+                            <li>Core JS</li>
+                            <li>Advanced JS</li>
+                        </ol>
+                    </li>
+                    <li>JQUERY</li>
+                </ol>
+            </li>
+            <li>Angular</li>
+            <li>React</li>
+        </ol>
+    </section>
+    <section>
+        <h1>Definition Lists</h1>
+        <h2>Technologies</h2>
+        <dl>
+            <dt>HTML</dt>    
+            <dd>HTML is used to describe contents on web page using tags</dd>
+            <dt>CSS</dt>
+            <dd>CSS is used to style HTML pages</dd>
+        </dl>
+        <dl>
+            <ol>
+                <li> <dt>HTML</dt>  </li>
+                <dd>HTML is used to describe contents on web page using tags</dd>
+                <li>  <dt>CSS</dt></li>
+                <dd>CSS is used to style HTML pages</dd>
+            </ol>
+        </dl>
+    </section>
+    
+    <section>  
+        <h1>Ordered List</h1>
+        <h2 style="background-color: #9d0fbd; color: yellow;">Icecream  Flavours</h2>
+        <!--1. readability gets reduced
+        2. HTML+CSS
+        3. Can not reuse the properties-->
+        <!-- default type : "1"-->
+        <ol>
+            <li style="background-color: #9d0fbd; color: yellow;">Vanilla</li>
+            <li>Mango</li>
+            <li>Butterscotch</li>
+            <li>Coconut</li>
+        </ol>
+        <li>dhdhdhd</li>
+        <ol type="A">
+            <li>Vanilla</li>
+            <li>Mango</li>
+            <li>Butterscotch</li>
+            <li>Coconut</li>
+        </ol>
+        <ol reversed>
+            <li>Vanilla</li>
+            <li>Mango</li>
+            <li>Butterscotch</li>
+            <li>Coconut</li>
+            <li>Vanilla</li>
+            <li>Mango</li> 
+            <li>Vanilla</li>
+            <li>Mango</li>
+        </ol>
+        <ol type="a" reversed>
+            <li>Vanilla</li>
+            <li>Mango</li>
+            <li>Butterscotch</li>
+            <li>Coconut</li>
+            <li>Chocolate</li>
+            <li>Strawberry</li> 
+            <li>Black Current</li>
+            <li>Oreo</li>
+        </ol>
+        <ol type="A" start="5">
+            <li>Vanilla</li>
+            <li>Mango</li>
+            <li>Butterscotch</li>
+            <li>Coconut</li>
+            <li>Chocolate</li>
+            <li>Strawberry</li> 
+            <li>Black Current</li>
+            <li>Oreo</li>
+        </ol>
+        <ol type="A" start="-3">
+            <li>Vanilla</li>
+            <li>Mango</li>
+            <li>Butterscotch</li>
+            <li>Coconut</li>
+            <li>Chocolate</li>
+            <li>Strawberry</li> 
+            <li>Black Current</li>
+            <li>Oreo</li>
+        </ol>
+        <ol start="-3">
+            <li>Vanilla</li>
+            <li>Mango</li>
+            <li>Butterscotch</li>
+            <li>Coconut</li>
+            <li>Chocolate</li>
+            <li>Strawberry</li> 
+            <li>Black Current</li>
+            <li>Oreo</li>
+        </ol>
+        <ol start="9" type="a" reversed >
+            <li>Vanilla</li>
+            <li>Mango</li>
+            <li>Butterscotch</li>
+            <li>Coconut</li>
+            <li>Chocolate</li>
+            <li>Strawberry</li> 
+            <li>Black Current</li>
+            <li>Oreo</li>
+        </ol>
+    </section>
+    <section>
+    <h2>UnorderedList</h2>
+    <!-- default type : disc-->
+    <ul>
+        <li>Vanilla</li>
+        <li>Mango</li>
+        <li>Butterscotch</li>
+        <li>Coconut</li>
+    </ul>
+    <ul type="circle">
+        <li>Vanilla</li>
+        <li>Mango</li>
+        <li>Butterscotch</li>
+        <li>Coconut</li>
+    </ul>
+    <ul type="square">
+        <li>Vanilla</li>
+        <li>Mango</li>
+        <li>Butterscotch</li>
+        <li>Coconut</li>
+    </ul>
+    </section>
+    <section>
+        <h2>Nested List</h2>
+        <h2>Technology List</h2>
+        <ol>
+            <li>Web Basics
+                <ol>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JAVASCRIPT
+                        <ul>
+                            <li>Core JS</li>
+                            <li>Advanced JS</li>
+                        </ul>
+                    </li>
+                    <li>JQUERY</li>
+                </ol>
+            </li>
+            <li>Angular</li>
+            <li>React</li>
+        </ol>
+        <ul>
+            <li>Web Basics
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JAVASCRIPT
+                        <ul>
+                            <li>Core JS</li>
+                            <li>Advanced JS</li>
+                        </ul>
+                    </li>
+                    <li>JQUERY</li>
+                </ul>
+            </li>
+            <li>Angular</li>
+            <li>React</li>
+        </ul>
+        <ol>
+            <li>Web Basics
+                <ol>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JAVASCRIPT
+                        <ol>
+                            <li>Core JS</li>
+                            <li>Advanced JS</li>
+                        </ol>
+                    </li>
+                    <li>JQUERY</li>
+                </ol>
+            </li>
+            <li>Angular</li>
+            <li>React</li>
+        </ol>
+    </section>
+    <section>
+        <h1>Definition Lists</h1>
+        <h2>Technologies</h2>
+        <dl>
+            <dt>HTML</dt>    
+            <dd>HTML is used to describe contents on web page using tags</dd>
+            <dt>CSS</dt>
+            <dd>CSS is used to style HTML pages</dd>
+        </dl>
+        <dl>
+            <ol>
+                <li> <dt>HTML</dt>  </li>
+                <dd>HTML is used to describe contents on web page using tags</dd>
+                <li>  <dt>CSS</dt></li>
+                <dd>CSS is used to style HTML pages</dd>
+            </ol>
+        </dl>
+    </section>
+</body>
+</html>

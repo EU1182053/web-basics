@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="myIndia">
+        India <b>Is my <i>Country</i></b>
+    </p>
+    <p id="mypara">
+
+    </p>
+    <div id="block">
+
+    </div>
+    <button onclick="change()">CHNAGE INNER CONTENTS</button>
+    <button onclick="copypaste()">COPY PASTE</button>
+    <script>
+        let node=document.getElementById('myIndia');
+        let array=node.children;  // property // childNodes : direct childs
+        console.log(array);
+        let html=node.innerHTML; // inner html contents of that node
+        console.log(html);
+        let text=node.innerText; // inner text content of that node
+        console.log(text);
+        let change =()=>{
+            //node.innerHTML="<h3>INDIA</h3>"; // add new contents along with elements
+            node.innerText="<h3>INDIA</h3>"; // add new contents as a plain text
+        }
+          /* copy inner html of myIndia and paste into mypara
+          copy inner text of myIndia and paste into block in h3
+          */
+        let copypaste=()=>{
+            document.getElementById('mypara').innerHTML=document.getElementById('myIndia').innerHTML;
+            let textcontent=document.getElementById('myIndia').innerText;
+            document.getElementById('block').innerHTML=`<h3>${textcontent}</h3>`;
+        }
+      
+    </script>
+</body>
+</html>

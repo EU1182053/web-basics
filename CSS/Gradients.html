@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradients</title>
+    <style>
+        .block{
+            border: 2px solid green;
+            height: 200px;
+        }
+        #block1{
+            background-image: linear-gradient(red,yellow,orange,pink, blue, green);
+        }
+        #block2{
+            /*to top, top left, to right, to top left*/
+            background-image: linear-gradient(to left, red,yellow,orange,pink, blue, green);
+        }
+        #block3{
+            /*45deg,30deg : +ve or -ve*/
+            background-image: linear-gradient(-5deg, red,yellow,orange,pink, blue, green);
+        }
+        #block4,#block5{
+            width: 500px;
+            height: 200px;
+        }
+        #block4{      
+            background-image: radial-gradient(pink,purple,green,cyan,crimson);
+        }
+        #block5{
+            /*ellipse, circle*/
+            background-image: radial-gradient(closest-side at 60% 55%,pink,rgba(255,0,0),green,cyan,crimson);
+        }
+    </style>
+</head>
+<body>
+    <div class="block" id="block1"> 
+        India is my country1
+    </div>
+    <div class="block" id="block2"> 
+        India is my country2
+    </div>
+    <div class="block" id="block3"> 
+        India is my country3
+    </div>
+    <div class="block" id="block4"> 
+        India is my country4
+    </div>
+    <div class="block" id="block5"> 
+        India is my country5
+    </div>
+</body>
+</html>

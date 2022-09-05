@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM2Demo</title>
+    <style>
+        .india,.cricketer{
+            background-color: yellow !important; 
+            color: blue;
+        }
+        .spacing{
+            margin: 10px;
+            padding: 20px;
+            border: 2px solid pink;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <h2 class="india">INDIA</h2>
+        <p>India is my country</p>
+        <p class="india">India is my country</p>
+        <p>India is my country</p>
+        <p class="india">India is my country</p>
+        <div class="india">All indians are my brothers and</div>    
+    </section>
+    <section>
+        <h1 id="sachin" class="cricketer">Sachin Tendulkar</h1>
+    </section>
+    <script>
+        let nodeArray=document.getElementsByTagName('p');
+        console.log(nodeArray);
+        let nodeArray2=document.getElementsByClassName('india');
+        console.log(nodeArray2);
+        for(let i=0;i<nodeArray2.length;i++){
+             let node=nodeArray2[i];
+            console.log(i);
+             node.setAttribute('style','font-size:40px; border:4px solid red') // html style attribute 
+        }
+        let h1Node=document.getElementById('sachin');
+        /* h1Node.style.backgroundColor='red';  */ // js cant replace css property marked !important
+       /*  h1Node.setAttribute('class','spacing'); */ // replace existing class
+         /*    h1Node.className="spacing";  */    // replace existing classes
+            console.log(h1Node.classList);
+            h1Node.classList.add('spacing');   // add new class in existing classes
+            console.log(h1Node.classList); 
+    </script>
+
+  
+</body>
+</html>

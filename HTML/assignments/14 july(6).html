@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6</title>
+    <link rel="stylesheet" href="../../CSS/Styles/MyCSS.css">
+</head>
+
+<body>
+    <h2>Take Company Name from user. Display Name in Uppercase using output tag and onblur event on input
+        Note : use toUpperCase function of javascript.
+    </h2>
+    <form>
+        <input type="text" id="companyName" onblur="result.value=(companyName.value).toUpperCase()">
+        <output id="result"></output>
+    </form>
+
+
+    <!--
+        Design ListDemo html page by using
+        1. element selector
+        2. class selector
+        3. id selector
+        4. special selector
+        5. group selector
+
+        Note : Do not use complet  properties of CSS.
+    -->
+
+    <!--
+        1.element selector
+    -->
+
+    <h2>Element Selector</h2>
+    <label for="fname">First Name</label>
+    <input type="text" name="fname" id="fname" required pattern="[A-Za-z]*">
+    <!-- * means name can be of any length-->
+    <label for="lname">Last Name</label>
+    <input type="text" name="lname" id="lname">
+    <label for="company">Company Name:</label>
+    <input type="text" id="company" name="company" value="neosoft">
+
+
+    <!--
+        2.Class selector
+    -->
+    <h2>Class selector</h2>
+    <table border="5">
+        <caption>Employee Information</caption>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th class="row-style">Name</th>
+                <th>Department</th>
+                <th>Position</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1a</td>
+                <td>XYZ</td>
+                <td>IT</td>
+                <td>Manager</td>
+            </tr>
+            <tr>
+                <td>1a</td>
+                <td>XYZ</td>
+                <td>IT</td>
+                <td>Manager</td>
+            </tr>
+            <tr>
+                <td>1a</td>
+                <td>XYZ</td>
+                <td>IT</td>
+                <td>Manager</td>
+            </tr>
+            <tr>
+                <td>1a</td>
+                <td>XYZ</td>
+                <td>IT</td>
+                <td>Manager</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4"><small>Note : This contains only specific employee details</small></td>
+            </tr>
+        </tfoot>
+    </table>
+    <table border="5">
+        <caption>Employee Information</caption>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th class="row-style">Name</th>
+                <th>Department</th>
+                <th>Position</th>
+                <th colspan="2">Contact No.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1a</td>
+                <td>XYZ</td>
+                <td>IT</td>
+                <td rowspan="2">Manager</td>
+                <td>3243425325</td>
+                <td>45463454</td>
+            </tr>
+            <tr>
+                <td>1a</td>
+                <td>XYZ</td>
+                <td>IT</td>
+                <td>3243425325</td>
+                <td>45463454</td>
+            </tr>
+            <tr>
+                <td>1a</td>
+                <td>XYZ</td>
+                <td>IT</td>
+                <td>Manager</td>
+                <td>3243425325</td>
+                <td>45463454</td>
+            </tr>
+            <tr>
+                <td>1a</td>
+                <td>XYZ</td>
+                <td>IT</td>
+                <td>Manager</td>
+                <td colspan="2">453543535</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6"><small>Note : This contains only specific employee details</small></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- id Selector-->
+    <h2>id selector</h2>
+    <table border="5">
+        <caption>Employee Information</caption>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Position</th>
+                <th colspan="2">Contact No.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1a</td>
+                <td id="name-style">XYZ</td>
+                <td>IT</td>
+                <td rowspan="2">Manager</td>
+                <td>3243425325</td>
+                <td>45463454</td>
+            </tr>
+            <tr>
+                <td>1a</td>
+                <td id="name-style">XYZ</td>
+                <td>IT</td>
+                <td>3243425325</td>
+                <td>45463454</td>
+            </tr>
+            <tr>
+                <td>1a</td>
+                <td id="name-style">XYZ</td>
+                <td>IT</td>
+                <td>Manager</td>
+                <td>3243425325</td>
+                <td>45463454</td>
+            </tr>
+            <tr>
+                <td>1a</td>
+                <td id="name-style">XYZ</td>
+                <td>IT</td>
+                <td>Manager</td>
+                <td colspan="2">453543535</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6"><small>Note : This contains only specific employee details</small></td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+    <!--
+        special selector
+    -->
+
+    <h2>Special selector</h2>
+    <input type="password" name="pwd" class="pwd" placeholder="Password"
+        pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}">
+    <input type="password" name="cnfpwd" class="pwd" placeholder="Confirm Password"
+        pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}">
+
+
+    <!-- group selector-->
+    <h2>group selector</h2>
+    <ol>
+        <h3>Ice Scream Flavours</h3>
+        <li>vanilla</li>
+        <li>strawberry</li>
+    </ol>
+
+    <input type="ch">
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+</body>
+<script>
+    let flavours=['vanilla', 'butterscotch', 'strawberry', 'mango', 'oreo', 'coconut', 'vanilla'];
+    console.log(flavours);
+    let mySet=new Set(flavours);
+    console.log(mySet);
+    let tableNode=document.createElement('table');
+    tableNode.setAttribute('border','3');
+    let i=1;
+    for(let value of flavours){
+        let trNode=document.createElement('tr');
+        let tdNode2=document.createElement('td');
+        let tdNode1=document.createElement('td');
+        tdNode1.setAttribute('id','serialNum'+i);
+        tdNode2.textContent=value;
+        tdNode1.textContent=i;
+        i=i+2;
+        trNode.append(tdNode1);
+        trNode.append(tdNode2);
+        tableNode.append(trNode);
+    }
+    document.body.append(tableNode);
+</script>
+</html>

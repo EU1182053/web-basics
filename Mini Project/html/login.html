@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DelivFoo</title>
+    <!-- ===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+
+
+
+
+    <!-- Home -->
+    <div class="container">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Login</span>
+
+                <form action="./menu.html" onsubmit="return validateLogin()">
+                    <div class="input-field">
+
+                        <input id="mailId" type="text" placeholder="Email Id" onkeyup="validateEmail()">
+                        <p id="error2"></p>
+                    </div>
+                    <div class="input-field">
+
+                        <input id="pwd" type="password" class="password" placeholder="Password"
+                            onblur="validatePassword()">
+                        <p id="error3"></p>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">Remember me</label>
+                        </div>
+
+                        <a href="#" class="text">Forgot password?</a>
+                    </div>
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="showPwd" onclick="showPassword()">
+                            <label for="showPwd" class="text">show password</label>
+                        </div>
+                    </div>
+                    <div class="input-field button">
+                        <input type="submit" value="Login">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Not a member?
+                        <a href="#" class="text signup-link">Signup Now</a>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Registration Form -->
+            <div class="form signup">
+                <span class="title">Registration</span>
+
+                <form action="./menu.html" onsubmit="return validateSignup()" novalidate>
+                    <div class="input-field">
+                        <input id="firstName" type="text" placeholder="Name" onkeyup="validateName()">
+                        <p id="error1"></p>
+
+                    </div>
+                    <div class="input-field">
+                        <input id="mailId" type="text" placeholder="Email Id" onkeyup="validateEmail()">
+                        <p id="error2"></p>
+                    </div>
+                    <div class="input-field">
+                        <input id="pwd" type="password" class="password" placeholder="Password"
+                            onblur="validatePassword()">
+                        <p id="error3"></p>
+                    </div>
+                    <div class="input-field">
+                        <input id="confirmPwd" type="password" class="password" placeholder="Confirm Password"
+                            onblur="confirmPassword()">
+                        <p id="error4"></p>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="termCon">
+                            <label for="termCon" class="text">I accepted all terms and conditions</label>
+                        </div>
+                    </div>
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="showPwd" onclick="showPassword()">
+                            <label for="showPwd" class="text">show password</label>
+                        </div>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="submit" value="Signup">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Already a member?
+                        <a href="#" class="text login-link">Login Now</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="top">
+            <div class="content">
+                <a href="" class="logo">Deliv<span class="yellow">Foo</span></a>
+                <p>
+                    Lorem ipsum dolor sit amet,adipiscing elit. Eu, montes, metus
+                    porttitor consectetur pretium. Euismod imperdiet
+                </p>
+            </div>
+
+            <div class="links">
+                <div class="link">
+                    <h4>Contact Information</h4>
+                    <div>
+                        <img src="../images/location-cross.svg" alt="" />
+                        <span>Unit No.5,4rth Floor,Ruby Tower, Sena Pati Bapat Marg,Dadar West,Dadar 400028.</span>
+                    </div>
+                    <div>
+                        <img src="../images/sms-tracking.svg" alt="" />
+                        <span>delivfoo@gmail.com</span>
+                    </div>
+                </div>
+
+                <div class="link">
+                    <h4>Quick Links</h4>
+                    <a href="#">Services</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Download</a>
+                </div>
+
+                <div class="link">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Term of Use</a>
+                    <a href="#">Conditions</a>
+                    <a href="#">Location</a>
+                </div>
+
+                <div class="link">
+                    <h4>Connect with Us</h4>
+                    <div>
+                      <img src="../images/instagram.svg" alt="" />
+                      <a href="https://www.instagram.com/"><span>Instagram</span></a>
+                    </div>
+                    <div>
+                      <img src="../images/twitter.svg" alt="" />
+                      <a href="https://twitter.com/"><span>Twitter</span></a>
+                    </div>
+                    <div>
+                      <img src="../images/facebook.svg" alt="" />
+                      <a href="https://www.facebook.com/"><span>Facebook</span></a>
+                      
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>Copyright © 2010-2022 DelivFoo Company. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Go To Top -->
+    <div class="scroll-top">
+        <img src="../images/arrow-up-outline.svg" alt="" />
+    </div>
+    <!-- Scripts -->
+    <script src="../js/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade To demo</title>
+</head>
+<body>
+    <figure>
+        <img class="myImage" src="../HTML/MyImages/Rose.jpg" height="200" width="200" alt="rose">
+        <img class="myImage"  src="../HTML/MyImages/sachin.jpg" height="200" width="200" alt="sachin">
+    </figure>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!--minified-->
+    <script>
+        $(document).ready(function(){
+            $('.myImage').mouseover(function(){
+                $(this).fadeTo(2000,0.4);
+            });
+            $('.myImage').mouseleave(function(){
+                $(this).fadeTo(2000,1);
+            });
+        });
+    </script>
+</body>
+</html>

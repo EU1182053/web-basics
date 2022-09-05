@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 8</title>
+    <style>
+        #borderimg1 {
+            height: 100px;
+            width: 900px;
+            border: 20px solid rebeccapurple;
+            /*border-image-source border-image-slice border-image-width border-image-outset border-image-repeat
+            */
+            border-image: url('../MyImages/R.jpg') 200 repeat;
+        }
+
+        #borderimg2 {
+            height: 100px;
+            width: 900px;
+            border: 20px dashed rebeccapurple;
+            /*border-image-source border-image-slice border-image-width border-image-outset border-image-repeat
+            */
+            border-image: url('../MyImages/R.jpg') 10% fill;
+        }
+
+        #borderimg3 {
+            
+            border: solid 10px rgb(218, 9, 113);
+            border-image: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66)) 10;
+            
+            width: 200px;
+            height: 300px;
+            
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <h2>Implement using image</h2>
+    <div id="borderimg1">
+        <p>This is image1</p>
+    </div>
+    <br>
+    <div id="borderimg2">
+        <p>This is image2</p>
+
+    </div>
+    <br>
+    <h2>Linear Gradient</h2>
+    <div id="borderimg3">
+        <p>This is image3</p>
+
+    </div>
+    <br>
+    <div id="borderimg4">
+        <p>This is image4</p>
+
+    </div>
+</body>
+
+</html>

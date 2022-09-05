@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h2>Indian BreakFast</h2>
+    <ul id="breakfastlist">
+        <li>Idli Sambar</li>
+        <li>Vada Sambar</li>
+        <li>Pohe</li>
+        <li>Upma</li>
+    </ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!--minified-->
+    <script>
+        $(document).ready(function(){
+          /*adding new li after 3rd li*/
+          let newliNode=$('<li>');  //in js we use createElement
+          newliNode.text("Dosa");
+          $("ul>li:nth-child(3)").after(newliNode);
+          /*adding new li before 1st li*/
+          let newliNode2=$('<li>');
+          newliNode2.text("Sweet Shira");
+          $("ul>li:first-child").before(newliNode2);
+          /*appending new a tag after ul*/
+          let anchorNode=$('<a>');
+          anchorNode.attr({'href':'https://www.google.com/', 'target':'_blank'});
+          /*in js we call setAttribute function, but in jquery attr function*/
+          anchorNode.text("Go to Google");
+          $("#breakfastlist").after(anchorNode);
+        });
+    </script>
+</body>
+</html>

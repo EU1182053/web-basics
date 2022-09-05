@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HideShow</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!--minified-->
+    <script>
+        $(document).ready(function(){
+           
+            let btnNode=$('[type="button"]');
+            btnNode.click(function(){
+                if(btnNode.val()==='HIDE'){
+                        $('#block1').hide(100, function(){
+                            btnNode.val('SHOW');     // btnNode.value='SHOW'
+                        });
+                }    
+                else{
+                    $('#block1').show(200, function(){
+                        btnNode.val('HIDE');    
+                    });
+                }         
+            });
+
+            $("#toggle").click(function(){
+                $('#block1').toggle(500);
+            });
+
+        });
+    </script>
+     <style>
+        #block1{
+            height: 100px;
+            width: 200px;
+            border: 2px solid pink;
+        }
+   </style>
+</head>
+<body>
+    <input type="button" value="HIDE">
+    <button id="toggle">TOGGLE HIDESHOW</button>
+    <div id="block1">
+        India is my country
+    </div>
+</body>
+</html>

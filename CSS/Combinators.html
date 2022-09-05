@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinators</title>
+   <style>
+    /*style paragraphs inside section*/
+    /*space between parent and child : descendant selector 
+    direct and indirect childs get selected*/
+    section p{
+        background-color: yellow;
+    }
+     /*> between parent and child : child  selector 
+    only direct childs get selected*/
+    section>p{
+        color: red;
+        font-size: 20px;
+    }
+     /*style paragraphs inside element with class combinators*/
+    /*  .combinators p{
+            
+     }
+     .combinators>p{
+        
+    } */
+    /*style all elements inside section*/
+    section>*{
+        text-decoration: underline;
+    }
+    /*style adjacent paragraph immediatly after div*/
+    /*+, ~ */
+    div+p{
+        text-transform: uppercase;
+    }
+    div~p{
+       border : 4px double blue
+    }
+   
+     /*give special color to first li of ol(parent)*/
+     ol>#ht{
+        color: blue;
+     }
+     /*give special color to first li of ul(parent)*/
+     ul>li:first-child{
+        color: crimson;
+     }
+     ul>li:last-child{
+        color: pink;
+     }
+     ul>li:nth-child(3){
+        color: darkcyan;
+     }
+     /*regardless of parent*/
+     li:first-child{
+        text-transform: uppercase;
+     }
+      /*give color to direct li of parent ol*/
+      ol>li{
+        color: chocolate;
+     }
+    </style>
+</head>
+<body>
+    <aside>
+        <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Cold Coffee</li>
+            <li>Green tea</li>
+            <li>Tea without milk</li>
+        </ul>
+    </aside>
+    <article>
+        <ol>
+            <li id="ht">html</li>
+            <li>css</li>
+            <li>javascript
+                <ul>
+                    <li>core</li>
+                    <li>advanced</li>
+                </ul>
+            </li>
+            <li>jQuery</li>
+            <li>react</li>
+            <li>typescript</li>
+            <li>angular</li>
+        </ol>
+    </article>
+    <section class="combinators">
+        <p> 1. Welcome to Neosoft Technologies</p>
+        <p> 2. Welcome to LD Department. We offer following course training</p>
+        <ol>
+            <li>JAVA</li>
+            <li>ANGULAR</li>
+            <li>REACT</li>
+            <li>WEB</li>
+        </ol>
+        <div>
+            <p> inside para 1. We send traning calender in every month </p>
+        </div>
+        <p> 3. Welcome to Neosoft Technologies</p>
+        <p> 4. Welcome to Neosoft Technologies</p>
+        <footer>
+            this is footer 
+            <span>this is span</span>
+        </footer>
+    </section>
+    <article  class="combinators">
+        <p> para 1.  India is my country</p>
+        <div>
+            I love my country
+        </div>
+        <p>
+            para 2. I love india
+        </p>
+    </article>
+    <div>
+hi
+    </div>
+    <ul>
+        <li>hello</li>
+    </ul>
+    <p>
+        bye
+    </p>
+
+   
+</body>
+</html>

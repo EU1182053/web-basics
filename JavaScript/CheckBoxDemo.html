@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <section id="courses">
+        <label>Choose Interested Course:</label><br>
+        <label><input type="checkbox" id="ch1" name="course" value="java" onchange="collectCourses()">:JAVA</label>
+        <label><input type="checkbox" id="ch2" name="course"  value="web"  onchange="collectCourses()">:WEB BASICS</label>
+        <label><input type="checkbox" id="ch3" name="course"  value="angular" onchange="collectCourses()">:ANGULAR</label>
+        <label><input type="checkbox" id="ch4" name="course"  value="react" onchange="collectCourses()">:REACT</label>
+    </section>
+     <hr>
+    <script>
+        document.getElementById('ch2').checked=true;
+        let nodeList=document.getElementsByName("course"); // DOM method
+        console.log(nodeList);
+      
+        function collectCourses(){   
+            let tnode=document.getElementById("coursetable");
+            if(tnode!=null){
+                tnode.remove();
+            }
+            let courseArray=[];
+                nodeList.forEach(node=>{
+                    if(node.checked){                      // attribute access
+                       courseArray.push(node.value);          
+                    }
+                });
+                console.log(courseArray);
+                let tableNode=document.createElement('table');   // DOM method
+                tableNode.setAttribute('border','2');  // DOM method
+                tableNode.setAttribute('id','coursetable');
+                let trNode=document.createElement('tr');
+                tableNode.append(trNode);   // appendChild
+                for(let course of courseArray){
+                    let tdNode=document.createElement('td');
+                    trNode.append(tdNode);
+                    tdNode.textContent=course;
+                }
+                document.getElementById("courses").append(tableNode);
+        }
+        
+    </script>
+    
+</body>
+</html>

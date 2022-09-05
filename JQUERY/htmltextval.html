@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html text val</title>
+</head>
+<body>
+    
+    <p id="nation">
+        <b>India is my country <i>I love my india</i></b>
+    </p>
+    <label>Enter your age</label><input type="number" id="age">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!--minified-->
+    <script>
+        $(document).ready(function(){
+         let paraNode=$('#nation');
+         console.log(paraNode.html());
+         console.log("-----------");
+         console.log(paraNode.text());
+         console.log("-----------");
+         $("#age").keyup(function(){
+            console.log($("#age").val());
+         });
+        });
+    </script>
+</body>
+</html>
